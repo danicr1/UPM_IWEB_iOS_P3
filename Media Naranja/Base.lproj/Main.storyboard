@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Media_Naranja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-Wl-1xC" userLabel="SV Principal">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-hu-9cy" userLabel="SV Usuario">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3p4-fI-neZ" userLabel="SV Pregunta y boton usuario">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es tu fecha de nacimiento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hqW-0F-fE4" userLabel="Pregunta usuario">
+                                                        <rect key="frame" x="0.0" y="16" width="272" height="49"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="0.9882352941176471" green="0.58823529411764708" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q8-hj-d4n" userLabel="Boton usuario">
+                                                        <rect key="frame" x="272" y="25.5" width="93" height="30"/>
+                                                        <color key="backgroundColor" red="0.9882352941176471" green="0.73333333333333328" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Cambiar">
+                                                            <color key="titleColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="dFI-Gg-464" kind="presentation" identifier="Select Birthday" id="jDS-7t-oHd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="0Q8-hj-d4n" firstAttribute="width" secondItem="3p4-fI-neZ" secondAttribute="width" multiplier="0.25" id="9TI-Go-0cs"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-28-XvY" userLabel="SV fecha usuario">
+                                                <rect key="frame" x="0.0" y="81" width="375" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22h-Hn-8St" userLabel="Fecha usuario">
+                                                        <rect key="frame" x="10" y="15" width="355" height="51"/>
+                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.94901960784313721" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="15" left="10" bottom="15" right="10"/>
+                                                <variation key="heightClass=compact">
+                                                    <edgeInsets key="layoutMargins" top="5" left="10" bottom="5" right="10"/>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mJY-d5-H6o" userLabel="SV Media naranja">
+                                        <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XP1-fq-UC8" userLabel="SV Pregunta y boton mn">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuándo conociste a tu media naranja?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="c88-hY-8BU" userLabel="Pregunta media naranja">
+                                                        <rect key="frame" x="0.0" y="16" width="271.5" height="49"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="0.9882352941176471" green="0.58823529411764708" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjo-hE-5WZ" userLabel="Boton media naranja">
+                                                        <rect key="frame" x="271.5" y="25.5" width="93.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.9882352941176471" green="0.73333333333333328" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Cambiar">
+                                                            <color key="titleColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="VlH-aY-uyF" kind="presentation" identifier="Select Love" id="gfC-yA-WVr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="wjo-hE-5WZ" firstAttribute="width" secondItem="XP1-fq-UC8" secondAttribute="width" multiplier="0.25" id="gL8-hX-vH9"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="10"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP3-TD-iiN" userLabel="SV fecha mn">
+                                                <rect key="frame" x="0.0" y="81" width="375" height="80.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpm-at-eXY" userLabel="Fecha media naranja">
+                                                        <rect key="frame" x="10" y="15" width="355" height="50.5"/>
+                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.94901960784313721" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="15" left="10" bottom="15" right="10"/>
+                                                <variation key="heightClass=compact">
+                                                    <edgeInsets key="layoutMargins" top="5" left="10" bottom="5" right="10"/>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MtY-eb-59H" userLabel="SV Fiesta">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7zt-nL-b4H" userLabel="Fiesta">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                                <string key="text">Vuestra fiesta de la
+media naranja es:</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="0.9882352941176471" green="0.58823529411764708" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-aH-xKf" userLabel="SV Respuesta">
+                                                <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-hH-Nqt" userLabel="Respuesta">
+                                                        <rect key="frame" x="10" y="10" width="355" height="141.5"/>
+                                                        <color key="backgroundColor" red="0.98039215686274506" green="0.94901960784313721" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Q5r-hu-9cy" firstAttribute="height" secondItem="mJY-d5-H6o" secondAttribute="height" id="9rZ-Ge-roD"/>
+                                    <constraint firstItem="MtY-eb-59H" firstAttribute="height" secondItem="aCH-Wl-1xC" secondAttribute="height" multiplier="0.4" id="HCm-BH-Opn"/>
+                                    <constraint firstItem="MtY-eb-59H" firstAttribute="height" secondItem="aCH-Wl-1xC" secondAttribute="height" multiplier="0.5" id="jYd-UJ-uDr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HCm-BH-Opn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HCm-BH-Opn"/>
+                                        <exclude reference="jYd-UJ-uDr"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588235294117" green="0.61176470588235299" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aCH-Wl-1xC" secondAttribute="bottom" id="QOz-yw-PBn"/>
+                            <constraint firstItem="aCH-Wl-1xC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bus-My-hTM"/>
+                            <constraint firstItem="aCH-Wl-1xC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jSL-yh-QyR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCH-Wl-1xC" secondAttribute="trailing" id="yId-DD-ggg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LoveDateLabel" destination="Dpm-at-eXY" id="bR8-Dm-vo7"/>
+                        <outlet property="PartyDateLabel" destination="Z0v-hH-Nqt" id="Rlc-Ny-mzp"/>
+                        <outlet property="birthdayLabel" destination="22h-Hn-8St" id="PDj-xh-zEJ"/>
+                        <outlet property="loveDateLabel" destination="Dpm-at-eXY" id="dS9-Sp-DdO"/>
+                        <outlet property="partyDateLabel" destination="Z0v-hH-Nqt" id="lrb-eP-eZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="90"/>
+        </scene>
+        <!--Love View Controller-->
+        <scene sceneID="MH9-1d-Pww">
+            <objects>
+                <viewController id="VlH-aY-uyF" customClass="LoveViewController" customModule="Media_Naranja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ub3-vU-y7w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wVN-JL-QJZ" userLabel="SV principal">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="D2x-KW-k3N" userLabel="SV botones">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-Qp-s7W" userLabel="Cancel button">
+                                                <rect key="frame" x="10" y="10" width="152.5" height="44.5"/>
+                                                <color key="backgroundColor" red="0.9882352941176471" green="0.73333333333333328" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Cancelar">
+                                                    <color key="titleColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="fZl-NM-cgJ" kind="unwind" identifier="Love Cancel" unwindAction="backFromLove:" id="rqC-Ja-SeT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbH-GZ-qgv" userLabel="OK button">
+                                                <rect key="frame" x="212.5" y="10" width="152.5" height="44.5"/>
+                                                <color key="backgroundColor" red="0.9882352941176471" green="0.73333333333333328" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="OK">
+                                                    <color key="titleColor" red="0.031372549019607843" green="0.28235294117647058" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="fZl-NM-cgJ" kind="unwind" identifier="Love OK" unwindAction="backFromLove:" id="TMG-D2-cfZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vav-iA-2HJ">
+                                        <rect key="frame" x="0.0" y="64.5" width="375" height="259"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="561926213.01396799">
+                                            <!--2018-10-22 18:36:53 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="es_ES"/>
+                                    </datePicker>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-c9-UuP" userLabel="Relleno para SV">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vav-iA-2HJ" firstAttribute="height" secondItem="wVN-JL-QJZ" secondAttribute="height" multiplier="0.4" id="7lv-eQ-ENe"/>
+                                    <constraint firstItem="D2x-KW-k3N" firstAttribute="height" secondItem="wVN-JL-QJZ" secondAttribute="height" multiplier="0.1" id="EW0-ly-P3d"/>
+                                    <constraint firstItem="D2x-KW-k3N" firstAttribute="height" secondItem="wVN-JL-QJZ" secondAttribute="height" multiplier="0.15" id="uyx-Lz-WqP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uyx-Lz-WqP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" spacing="30">
+                                    <mask key="constraints">
+                                        <exclude reference="EW0-ly-P3d"/>
+                                        <include reference="uyx-Lz-WqP"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588235294117" green="0.61176470588235299" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wVN-JL-QJZ" firstAttribute="top" secondItem="z7i-R9-odr" secondAttribute="top" id="9h6-TB-4St"/>
+                            <constraint firstItem="z7i-R9-odr" firstAttribute="trailing" secondItem="wVN-JL-QJZ" secondAttribute="trailing" id="Js7-y1-znN"/>
+                            <constraint firstItem="wVN-JL-QJZ" firstAttribute="leading" secondItem="z7i-R9-odr" secondAttribute="leading" id="QX6-Wo-e2i"/>
+                            <constraint firstItem="z7i-R9-odr" firstAttribute="bottom" secondItem="wVN-JL-QJZ" secondAttribute="bottom" id="UBb-ny-59I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z7i-R9-odr"/>
+                    </view>
+                    <connections>
+                        <outlet property="loveDatePicker" destination="vav-iA-2HJ" id="VVh-Sm-dDq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9f2-YP-4rR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fZl-NM-cgJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="399"/>
+        </scene>
+        <!--Birthday View Controller-->
+        <scene sceneID="mmt-gq-HJj">
+            <objects>
+                <viewController id="dFI-Gg-464" customClass="BirthdayViewController" customModule="Media_Naranja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xKP-XW-0SS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-wi-Dwd" userLabel="SV principal">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="41n-2s-KST" userLabel="SV botones">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZn-4s-EI6" userLabel="Cancel button">
+                                                <rect key="frame" x="10" y="10" width="152.5" height="44.5"/>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.73333333329999995" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Cancelar">
+                                                    <color key="titleColor" red="0.031372549020000001" green="0.28235294119999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="gRf-Mj-oBv" kind="unwind" identifier="Birthday Cancel" unwindAction="backFromBirthday:" id="WNU-Tt-qdb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHZ-D2-EiH" userLabel="OK button">
+                                                <rect key="frame" x="212.5" y="10" width="152.5" height="44.5"/>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.73333333329999995" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="OK">
+                                                    <color key="titleColor" red="0.031372549020000001" green="0.28235294119999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="gRf-Mj-oBv" kind="unwind" identifier="Birthday OK" unwindAction="backFromBirthday:" id="imH-oT-hO9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dPs-vr-Bzs">
+                                        <rect key="frame" x="0.0" y="64.5" width="375" height="259"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="561926213.01396799">
+                                            <!--2018-10-22 18:36:53 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="es_ES"/>
+                                    </datePicker>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-YO-lMJ" userLabel="Relleno para SV">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="41n-2s-KST" firstAttribute="height" secondItem="vgf-wi-Dwd" secondAttribute="height" multiplier="0.15" id="7ba-TF-k3E"/>
+                                    <constraint firstItem="dPs-vr-Bzs" firstAttribute="height" secondItem="vgf-wi-Dwd" secondAttribute="height" multiplier="0.4" id="b0K-dC-bAo"/>
+                                    <constraint firstItem="41n-2s-KST" firstAttribute="height" secondItem="vgf-wi-Dwd" secondAttribute="height" multiplier="0.1" id="yc7-Gh-myE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7ba-TF-k3E"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" spacing="30">
+                                    <mask key="constraints">
+                                        <exclude reference="yc7-Gh-myE"/>
+                                        <include reference="7ba-TF-k3E"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588239999997" green="0.61176470589999998" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vgf-wi-Dwd" firstAttribute="leading" secondItem="72p-fi-xRU" secondAttribute="leading" id="063-im-H5B"/>
+                            <constraint firstItem="72p-fi-xRU" firstAttribute="bottom" secondItem="vgf-wi-Dwd" secondAttribute="bottom" id="BFb-qM-rpm"/>
+                            <constraint firstItem="vgf-wi-Dwd" firstAttribute="top" secondItem="72p-fi-xRU" secondAttribute="top" id="UYe-ne-KAe"/>
+                            <constraint firstItem="72p-fi-xRU" firstAttribute="trailing" secondItem="vgf-wi-Dwd" secondAttribute="trailing" id="Vsp-Yk-nlk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="72p-fi-xRU"/>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayPicker" destination="dPs-vr-Bzs" id="A6C-XK-1U8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3k-ws-iPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gRf-Mj-oBv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="-264"/>
+        </scene>
+    </scenes>
+</document>
